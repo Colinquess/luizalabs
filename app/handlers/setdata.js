@@ -22,10 +22,6 @@ function stringsToObjects (strings, objectRules) {
     const ruledObject = {}
 
     objectRules.forEach(rule => {
-      /* This works and is way shorter instead of next 12 lines, but doens't feel right, too hard to maintain
-            ruledObject[rule.name] = (rule.type == 'integer'?parseInt:rule.type == 'float'?parseFloat:String)
-                                        (string.substring(rule.startingFrom, rule.endingIn))
-*/
       ruledObject[rule.name] = string.substring(rule.startingFrom, rule.endingIn)
 
       switch (rule.type) {
@@ -46,9 +42,8 @@ function stringsToObjects (strings, objectRules) {
   })
 }
 
-async function setdata (req, res, next) {
-  try {
-    // Validation, max "startingFrom | endingIn" must be total line length
+function setdata (req, res, next) {
+  const returnInfo = new Promise(resolve => {
     const validLineLength = Math.max(config.legacyStringRules.map(rule => Math.max([rule.endingIn, rule.startingFrom])))
 
     const validStrings = getFilesAsStrings(req.files)
@@ -56,12 +51,12 @@ async function setdata (req, res, next) {
 
     const validObjects = stringsToObjects(validStrings, config.legacyStringRules)
 
-    const dbResp = await db.setRequests(validObjects)
+    db.setRequests(validObjects).then(resolve)
+  })
 
-    return res.status(200).json(dbResp)
-  } catch (error) {
-    return next(error)
-  }
+  returnInfo
+    .then(dbResp => res.status(200).json(dbResp))
+    .catch(next)
 }
 
 module.exports = setdata
