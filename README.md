@@ -46,11 +46,11 @@
 
 This project was make as a sample to showcase my nodejs and API creation skills.
 
-For file handling, it uses the [Multer][multer]
+For file handling, it uses the [Multer][multer-url]
 
-For server, it uses the [Express][express]
+For server, it uses the [Express][express-url]
 
-For testing, it uses [Jest][jest] and [Supertest][supertest-url]
+For testing, it uses [Jest][jest-url] and [Supertest][supertest-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +85,6 @@ app
     └── API_tests.spec.js
 </pre>
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -102,8 +101,9 @@ To run the project without docker just run the following commands in your termin
 Testing:
 * npm run test
 
-# POSTMAN_TESTS_COLECTION_API_SHARELINK
-https://api.postman.com/collections/20978866-f30f4480-3228-4db3-99be-c40ce8f199a1?access_key=PMAT-01HG3TS7F2VWJWBNTW90C1PMK9
+### Shared Postman Colection
+
+[Postman Colection](https://api.postman.com/collections/20978866-f30f4480-3228-4db3-99be-c40ce8f199a1?access_key=PMAT-01HG3TS7F2VWJWBNTW90C1PMK9)
 
 <!-- LICENSE -->
 ## License
@@ -115,7 +115,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@josecolinques](https://colinquess.github.io/) - josecolinques@gmail.com
+José L. N. Coliques - [@josecolinques](https://colinquess.github.io/) - josecolinques@gmail.com
 
 Project Link: [https://github.com/Colinquess/luizalabs](https://github.com/Colinquess/luizalabs)
 
