@@ -127,7 +127,7 @@ Project Link: [https://github.com/Colinquess/luizalabs](https://github.com/Colin
 [express]: https://img.shields.io/badge/express-black?style=for-the-badge&logo=express&logoColor=0969da
 [express-url]: https://expressjs.com/
 
-[jest]: https://img.shields.io/badge/supertest-15c213?style=for-the-badge&logo=jest&logoColor=0000
+[jest]: https://img.shields.io/badge/jest-15c213?style=for-the-badge&logo=jest&logoColor=0000
 [jest-url]: https://jestjs.io/pt-BR/
 
 [supertest]: https://img.shields.io/badge/supertest-0969da?style=for-the-badge&logo=supertest&logoColor=0969da
